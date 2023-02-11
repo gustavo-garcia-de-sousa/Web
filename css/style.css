@@ -736,10 +736,42 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Services Section
 --------------------------------*/
 #services {
-  background: #fff;
+  background: url("../img/about-bg.jpg") center top no-repeat fixed;
   background-size: cover;
   padding: 60px 0 40px 0;
+  position: relative;
 }
+#services::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 9;
+}
+
+#services .container {
+  position: relative;
+  z-index: 10;
+}
+
+#services .services-col {
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+#services .services-col .img {
+  position: relative;
+}
+
+#services .services-col .img img {
+  border-radius: 4px 4px 0 0;
+}
+
 
 #services .box {
   margin-bottom: 30px;
