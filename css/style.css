@@ -169,11 +169,6 @@ h6 {
 /*--------------------------------------------------------------
 # Confugurações da seção: Introdução
 --------------------------------------------------------------*/
-section#introducao {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
 .banner {
   background-color: #f5f5f5;
@@ -474,7 +469,8 @@ section#introducao {
 }
 
 #mobile-nav ul li a {
-  color: var(--branco);;
+  color: var(--branco);
+  ;
   font-size: 13px;
   text-transform: uppercase;
   overflow: hidden;
@@ -489,7 +485,8 @@ section#introducao {
 }
 
 #mobile-nav ul li a:hover {
-  color: var(--branco);;
+  color: var(--branco);
+  ;
 }
 
 #mobile-nav ul li li {
@@ -502,7 +499,8 @@ section#introducao {
   z-index: 99;
   padding: 15px;
   cursor: pointer;
-  color: var(--branco);;
+  color: var(--branco);
+  ;
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
@@ -540,7 +538,8 @@ body.mobile-nav-active #mobile-nav {
 }
 
 body.mobile-nav-active #mobile-nav-toggle {
-  color: var(--branco);;
+  color: var(--branco);
+  ;
 }
 
 /*--------------------------------------------------------------
@@ -574,12 +573,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #featured-services {
   background: var(--preto);
+  background-size: cover;
+  padding: 60px 0 40px 0;
+  position: relative;
 }
 
 #featured-services .container {
   position: relative;
   z-index: 10;
 }
+
+#featured-services .services-col {
+  background: var(--branco);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 12px rgba(5, 25, 34 0.08);
+  margin-bottom: 20px;
+}
+
 
 #featured-services .box {
   padding: 30px 20px;
@@ -816,7 +826,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #facts {
   background: url("../img/facts-bg.jpg") center top no-repeat fixed;
   background-size: cover;
-  padding: 60px 0 0 0;
+  padding: 60px 0 40px 0;
   position: relative;
 }
 
@@ -842,15 +852,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 48px;
   display: block;
   color: var(--tema);
-  ;
-}
-
-#facts .container h3 {
-  padding: 0;
-  margin: 0 0 20px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
-  color: var(--preto);
 }
 
 #facts .container p {
@@ -1024,15 +1025,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Seções do Pedro
 --------------------------------*/
 
-.menu a:last-child {
-  margin-right: 2rem;
-}
-
-section#introducao {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
 .item {
   margin-top: 3.2rem;
@@ -1064,13 +1056,22 @@ section#introducao {
 }
 
 
+#color {
+  background: linear-gradient(92.55deg, #FF7A00 5.95%, #140083 92.99%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  border-left: 5px solid var(--corPrincipal);
+  padding-left: 5px;
+}
 
 .item button {
   font-size: 1.1rem;
   padding: 12px 15px;
-  color: var(--tema);
-  background: var(--branco);
-  border: .5px solid var(--tema);
+  color: var(--corPrincipal);
+  background: #fff;
+  border: .5px solid var(--corPrincipal);
   border-radius: 12px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
@@ -1108,7 +1109,7 @@ article {
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: var(--tema);
+  color: var(--corPrincipal);
 }
 
 #texto {
@@ -1119,35 +1120,48 @@ li {
   margin: 1rem 0rem 0rem 2rem;
 }
 
-#solucoes {
+.problemas p:first-of-type {
+  margin-top: 3rem;
+}
+
+.problemas h3 {
+  font-weight: normal;
+  color: #3a3747;
+}
+
+.problemas p:last-of-type {
+  margin-top: 1rem;
+}
+
+.solucoes {
   margin-top: 4rem !important;
   margin-bottom: 7rem !important;
   max-width: 1100px;
   min-width: 500px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--tema);
+  background-color: #f78528;
   border-radius: 3rem;
 }
 
-#solucoes h1 {
+.solucoes h1 {
   color: #FCF7F7;
   margin-bottom: 1rem;
 }
 
-#solucoes img {
+.solucoes img {
   margin-top: -4.5rem;
   width: 250px;
   position: relative;
   float: right;
 }
 
-#solucoes A:first-of-type {
+.solucoes A:first-of-type {
   font-weight: bold;
   color: #140083;
 }
 
-.desenvolvimento {
+section#desenvolvimento {
   margin: 5rem 0rem 10rem 0rem;
   display: flex;
   justify-content: center;
@@ -1155,7 +1169,8 @@ li {
   text-align: center;
   flex-wrap: wrap;
 }
-.desenvolvimento img {
+
+section#desenvolvimento img {
   display: flex;
   margin: 0 auto;
   width: 110px;
@@ -1166,6 +1181,11 @@ li {
   width: auto !important;
   padding: 0px 1rem;
   margin-top: -2rem;
+}
+
+.item-dev {
+  width: auto;
+  color: var(--corPrincipal);
 }
 
 .seta:nth-child(4) {
@@ -1211,19 +1231,31 @@ li {
 }
 
 #dev h2{
-  color: var(--tema);
+  color: var(--corPrincipal);
   margin: 1rem;
 }
 
 #produto{
   background-color: #FAD961;
 background-image: linear-gradient(121deg, #FAD961 0%, #F76B1C 100%); 
-color: var(--branco); 
+color: #fff; 
 margin: 10rem 0rem 0rem; 
 padding: 0.1px 0px;
 }
 #produto h1{
   margin: 1.1rem 0rem;
+}
+
+.app{
+  margin: 5rem 0rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.escolhe-app{
+  background-color: #FCF7F7;
+  border-radius: 1rem;
+  color: #00326b;
 }
 
 
